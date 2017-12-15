@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="{{ grav.language.getLanguage ?: 'en' }}">
+    <head>
+        {% block head %}
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {% include 'partials/metadata.html.twig' %}
+        <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+        <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png', true) }}" />
+        {% block stylesheets %}
+            {% do assets.add('theme://css/font-awesome.min.css',99) %}
+            {% do assets.add('theme://css-compiled/theme.css',98) %}
+            {% do assets.add('theme://css/flaticon.css',99) %}
+            {% do assets.add('theme://css/magnific-popup.css',99) %}
+            {% do assets.add('theme://css/media.css',99) %}
+            {% do assets.add('theme://css/owl.carousel.css',99) %}
+            {% do assets.add('theme://css/style.css',99) %}
+        {% endblock %}
+        {{ assets.css() }}
+	      <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+        {% block javascripts %}
+            {% do assets.add('jquery', 101) %}
+            {% do assets.add('theme://js/modernizr.custom.71422.js', 100) %}
+            {% do assets.add('theme://js/singlePageNav.min.js', 100) %}
+            {% do assets.add('theme://js/main.js', 100) %}
+
+            {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
+                {% do assets.add('https://oss.maxcdn.com/respond/1.4.2/respond.min.js') %}
+                {% do assets.add('theme://js/html5shiv-printshiv.min.js') %}
+            {% endif %}
+
+        {% endblock %}
+        {{ assets.js() }}
+
+        {% endblock head%}
+    </head>
+
+      <body class="{% block body_classes %}{{ page.header.body_classes }}{% endblock %}">
+
+        <div id="preloder">
+          <div class="loader">
+            <img src="../../images/logo.png" alt="">
+            <h2>Cargando.....</h2>
+          </div>
+        </div>
+
+        {% if config.plugins.langswitcher.enabled %}
+            {% include 'partials/langswitcher.html.twig' %}
+        {% endif %}
+        {% block header_navigation %}
+            {% include 'partials/navigation.html.twig' %}
+        {% endblock %}
+        <div class="page-top-section">
+          <div class="overlay"></div>
+          <div class="container text-right">
+            <div class="page-info">
+              <h2>Blog</h2>
+              <div class="page-links">
+                <a href="#">Home</a>
+                <span>Blog</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% block content %}{% endblock %}
+        {% block pagination %}{% endblock %}
+
+        <!-- newsletter section -->
+      	<div class="newsletter-section spad">
+      		<div class="container">
+      			<div class="row">
+      				<div class="col-md-3">
+      					<h2>Newsletter</h2>
+      				</div>
+      				<div class="col-md-9">
+      					<!-- newsletter form -->
+      					<form class="nl-form">
+      						<input type="text" placeholder="Your e-mail here">
+      						<button class="site-btn btn-2">Newsletter</button>
+      					</form>
+      				</div>
+      			</div>
+      		</div>
+      	</div>
+      	<!-- newsletter section end-->
+
+
+      	<!-- Footer section -->
+        <footer class="footer-section">
+      		<h2>2017 Derechos Reservados. Hecho por <a href="http://simplecs.tech" target="_blank">Simplecs</a></h2>
+      	</footer>
+      	<!-- Footer section end -->
+        {% block bottom %}{% endblock %}
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-98401479-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-98401479-1');
+        </script>
+    </body>
+</html>
