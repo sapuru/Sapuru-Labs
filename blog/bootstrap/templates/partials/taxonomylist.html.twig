@@ -2,11 +2,11 @@
 
 {% if taxlist %}
 
-<span class="tags">
+<ul class="tag">
     {% for tax,value in taxlist[taxonomy] %}
 
-        <a class="label label-default" href="{{ base_url }}/tag:{{ tax }}">{{ tax }}</a>
+        <li><a class="" href="{{ base_url }}/tag:{{ tax }}">{{ tax }}</a></li>
 
     {% endfor %}
-</span>
+</ul>
 {% endif %}

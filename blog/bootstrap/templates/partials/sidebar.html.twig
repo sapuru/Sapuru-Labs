@@ -1,26 +1,32 @@
 {% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
-
-{% if config.plugins.simplesearch.enabled %}
 <div class="sidebar-content spad">
-						<h2 class="widget-title">Buscar</h2>
+	<div class="widget-item">
+{% if config.plugins.simplesearch.enabled %}
     {% include 'partials/simplesearch_searchbox.html.twig' %}
 </div>
 {% endif %}
+<div class="widget-item">
+	<img src="../../images/ay2.png">
+</div>
+<div class="widget-item">
+	<h2 class="widget-title">Hola!</h2>
+<p>Mi nombre es Aymará Samudio, actualmente soy CTO de <a href="http://greendemia.com">Greendemia</a> y Directora de <a href="http://greendemia.academy">Greendemia Academy</a>. En este blog comparto mis experiencias sobre formación y mentoría en tecnología. Suscribite para no perderte el contenido.</p>
+</div>
+
 {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
+					<div class="widget-item">
 						<h2 class="widget-title">Relacionado</h2>
     {% include 'partials/relatedpages.html.twig' %}
 {% endif %}
+</div>
 {% if config.plugins.random.enabled %}
 					<div class="widget-item">
 						<h2 class="widget-title">Random Article</h2>
     <a class="button" href="{{ base_url_relative }}/random"><i class="fa fa-retweet"></i> I'm Feeling Lucky!</a>
 </div>
 {% endif %}
-					<div class="widget-item">
-						<h2 class="widget-title">Texto</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-</div>
+
 {% if config.plugins.taxonomylist.enabled %}
 					<div class="widget-item">
 						<h2 class="widget-title">Tags</h2>
@@ -44,3 +50,4 @@
     </div>
 </div>
 {% endif %}
+</div>

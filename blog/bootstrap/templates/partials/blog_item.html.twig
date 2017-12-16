@@ -1,6 +1,6 @@
 
 
-					<div class="post-item spad">
+					<div class="post-item topad">
  						<div class="post-thumbnail">
     {% set header_image = page.header.header_image|defined(true) %}
     {% set header_image_width  = page.header.header_image_width|defined(900) %}
@@ -20,8 +20,8 @@
             {% endif %}
         {% endif %}
 				<div class="post-date">
-	<h3>{{ page.date|date("F j, Y, g:i a") }}</h3>
-
+	<h2>{{ page.date|date("j") }}</h2>
+	<h3>{{ page.date|date("M Y") }}</h3>
 			</div>
 		</div>
 

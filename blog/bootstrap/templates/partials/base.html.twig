@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {% include 'partials/metadata.html.twig' %}
         <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
-        <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png', true) }}" />
+        <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.ico', true) }}" />
         {% block stylesheets %}
             {% do assets.add('theme://css/bootstrap.min.css',99) %}
             {% do assets.add('theme://css/font-awesome.min.css',99) %}
@@ -36,7 +36,7 @@
 
         <div id="preloder">
           <div class="loader">
-            <img src="../../images/logo.png" alt="">
+            <img src="../../images/aymara-samudio.png" alt="">
             <h2>Cargando.....</h2>
           </div>
         </div>
@@ -72,9 +72,9 @@
       				</div>
       				<div class="col-md-9">
       					<!-- newsletter form -->
-      					<form class="nl-form">
-      						<input type="text" placeholder="Your e-mail here">
-      						<button class="site-btn btn-2">Newsletter</button>
+      					<form class="nl-form validate" action="https://soy.us15.list-manage.com/subscribe/post?u=6046656db5f95b4e271b7fbc9&amp;id=bbe837110a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+      						<input type="text" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="escribe tu email" required>
+      						<button type="submit" name="subscribe" id="mc-embedded-subscribe" class="site-btn btn-2">Suscribime!</button>
       					</form>
       				</div>
       			</div>
