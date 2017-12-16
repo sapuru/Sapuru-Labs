@@ -1107,6 +1107,10 @@ ul {
 	margin-bottom: 18px;
 }
 
+.post-title a {
+	color:#333;
+	text-decoration:none;
+}
 .post-meta {
 	margin-bottom: 40px;
 }

@@ -1,18 +1,11 @@
-					<div class="post-item">
+
+
+					<div class="post-item spad">
  						<div class="post-thumbnail">
     {% set header_image = page.header.header_image|defined(true) %}
     {% set header_image_width  = page.header.header_image_width|defined(900) %}
     {% set header_image_height = page.header.header_image_height|defined(300) %}
     {% set header_image_file = page.header.header_image_file %}
-
-							<div class="post-date">
-        <h3>{{ page.date|date("F j, Y, g:i a") }}</h3>
-
-            </div>
-          </div>
-
-						<div class="post-content">
-
 
         {% if big_header %}
             {{ page.media.images|first.cropResize(900,600).html('','blog-header-image') }}
@@ -26,7 +19,13 @@
                 {{ header_image_media.cropZoom(header_image_width, header_image_height).html }}
             {% endif %}
         {% endif %}
+				<div class="post-date">
+	<h3>{{ page.date|date("F j, Y, g:i a") }}</h3>
 
+			</div>
+		</div>
+
+						<div class="post-content">
 				{% if page.header.link %}
 											<h2 class="post-title">
 
