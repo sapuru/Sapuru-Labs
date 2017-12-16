@@ -880,6 +880,21 @@ ul {
 	padding: 18px 0;
 }
 
+#social-icons a {
+    display: inline-block;
+    width: 32px;
+    text-align: center;
+}
+
+#social-icons a:hover {
+    opacity: 0.7;
+}
+
+#social-icons span {
+    display: none;
+}
+
+
 /*=========================
 	Other Pages
 =========================*/
@@ -913,7 +928,7 @@ ul {
 .page-top-section .page-info .page-links a,
 .page-top-section .page-info .page-links span {
 	font-size: 18px;
-	font-family: "Oswald", sans-serif;
+	font-family: "aqua", sans-serif;
 	color: #fff;
 	margin-right: 12px;
 	padding-right: 12px;
@@ -1147,7 +1162,7 @@ ul {
 }
 
 .read-more {
-	font-family: "Oswald", sans-serif;
+	font-family: "aqua", sans-serif;
 	font-size: 16px;
 	color: #0b1033;
 	position: relative;
@@ -1170,7 +1185,7 @@ ul {
 
 .page-pagination a {
 	display: inline-block;
-	font-family: "Oswald", sans-serif;
+	font-family: "aqua", sans-serif;
 	font-size: 16px;
 	color: #0b1033;
 	padding: 6px 10px;
@@ -1377,7 +1392,7 @@ ul {
 }
 
 .single-progress-item p {
-	font-family: "Oswald", sans-serif;
+	font-family: "aqua", sans-serif;
 	color: #333;
 	margin-bottom: 12px;
 	font-weight: 500;
@@ -1404,7 +1419,7 @@ ul {
 	right: 0;
 	font-weight: bold;
 	top: -35px;
-	font-family: "Oswald", sans-serif;
+	font-family: "aqua", sans-serif;
 	color: #333;
 	font-weight: 500;
 }

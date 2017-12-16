@@ -66,19 +66,38 @@
         {% endif %}
         <p><a href="{{ page.url }}" class="read-more">Continuar...</a></p>
     {% else %}
+	</div>
         <p>{{ page.content }}</p>
+				<div class="author spad">
+					<div class="avatar">
+						<img src="../../images/avatar.jpg" alt="Aymará Samudio">
+					</div>
+					<div class="author-info">
+						<h3>Aymará Samudio, <span>Mentora</span></h3>
+						<p><a href="http://twitter.com/_sapuru">Twitter</a>
+							<br>
+							 <a href="http://linkedin.com/aymarasamudio">Linkedin</a>
+						</p>
+					</div>
+				</div>
+			<div class="comments">
+				{% if config.plugins.jscomments.enabled %}
+  			{{ jscomments()|raw }}
+				{% endif %}
+			</div>
+
         {% set show_prev_next = true %}
     {% endif %}
 
     {% if show_prev_next %}
-					<div class="page-pagination">
+					<div class="page-pagination spad">
         <p class="text-center">
             {% if not page.isFirst %}
-                <a class="btn btn-default" href="{{ page.nextSibling.url }}"><i class="fa fa-chevron-left"></i> Siguiente</a>
+                <a class="site-btn btn-2 mr20" href="{{ page.nextSibling.url }}"><i class="fa fa-chevron-left"></i> Siguiente</a>
             {% endif %}
 
             {% if not page.isLast %}
-                <a class="btn btn-default" href="{{ page.prevSibling.url }}">Anterior <i class="fa fa-chevron-right"></i></a>
+                <a class="site-btn btn-2 mr20" href="{{ page.prevSibling.url }}">Anterior <i class="fa fa-chevron-right"></i></a>
             {% endif %}
         </p>
       </div>
