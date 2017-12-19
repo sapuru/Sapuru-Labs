@@ -15,7 +15,7 @@
         <div class="container">
 
 		<div class="row">
-                <div class="col-sm-8 blog-main">
+                <div class="col-md-8 col-sm-7 blog-posts">
 					{% if config.plugins.breadcrumbs.enabled %}
 						{% include 'partials/breadcrumbs.html.twig' %}
 					{% endif %}
@@ -23,7 +23,7 @@
     			    {% include 'partials/blog_item.html.twig' with {'blog':page.parent, 'truncate':false, 'big_header':true} %}
     			</div>
 
-                <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+                <div class="col-md-4 col-sm-5 sidebar">
     				{% include 'partials/sidebar.html.twig' with {'blog':page.parent}%}
     			</div>
     		</div>
