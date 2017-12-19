@@ -46,7 +46,6 @@
 						{% endfor %}
 					</div>
 				{% endif %}
-    				</div>
 
     <div class="list-blog-padding">
 
@@ -68,40 +67,40 @@
     {% else %}
 	</div>
         <p>{{ page.content }}</p>
-				<div class="author spad">
+				<div class="author">
 					<div class="avatar">
-						<img src="../../images/avatar.jpg" alt="Aymará Samudio">
+						<img src="http://sapuru.soy/grav/user/themes/bootstrap/images/avatar.jpg" alt="">
 					</div>
 					<div class="author-info">
-						<h3>Aymará Samudio, <span>Mentora</span></h3>
-						<p><a href="http://twitter.com/_sapuru">Twitter</a>
-							<br>
-							 <a href="http://linkedin.com/aymarasamudio">Linkedin</a>
-						</p>
+						<h2>Aymará Samudio</h2>
+						<p>¿Estás decido a dar a tu proyecto la dinámica que necesita? Puedo ayudarte con tus equipos de trabajo y con los procesos de construcción de un emprendimiento eficaz.</p>
+						<a href="http://sapuru.soy/contacto.html" class="site-btn btn-2 mr20">Hablemos</a>
 					</div>
 				</div>
+
 			<div class="comments">
 				{% if config.plugins.jscomments.enabled %}
-  			{{ jscomments()|raw }}
+				{{ jscomments()|raw }}
 				{% endif %}
 			</div>
 
-        {% set show_prev_next = true %}
-    {% endif %}
+				{% set show_prev_next = true %}
+		{% endif %}
 
-    {% if show_prev_next %}
+		{% if show_prev_next %}
 					<div class="page-pagination spad">
-        <p class="text-center">
-            {% if not page.isFirst %}
-                <a class="site-btn btn-2 mr20" href="{{ page.nextSibling.url }}"><i class="fa fa-chevron-left"></i> Siguiente</a>
-            {% endif %}
+				<p class="text-center">
+						{% if not page.isFirst %}
+								<a class="site-btn btn-2 mr20" href="{{ page.nextSibling.url }}"><i class="fa fa-chevron-left"></i> Siguiente</a>
+						{% endif %}
 
-            {% if not page.isLast %}
-                <a class="site-btn btn-2 mr20" href="{{ page.prevSibling.url }}">Anterior <i class="fa fa-chevron-right"></i></a>
-            {% endif %}
-        </p>
-      </div>
-    {% endif %}
+						{% if not page.isLast %}
+								<a class="site-btn btn-2 mr20" href="{{ page.prevSibling.url }}">Anterior <i class="fa fa-chevron-right"></i></a>
+						{% endif %}
+				</p>
+			</div>
+		{% endif %}
+	</div>
+
 
     </div>
-</div>

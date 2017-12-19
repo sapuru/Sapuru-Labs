@@ -55,7 +55,7 @@ h2 {
 }
 
 p {
-	font-size: 18px;
+	font-size: 15px;
 	color: #555;
 	line-height: 30px;
 	font-family: "Abel", sans-serif;
@@ -1304,35 +1304,40 @@ ul {
 /*------------------------
 	Single Post
 --------------------------*/
-.single-post .post-content {
+ .post-content {
 	margin-bottom: 90px;
 }
 
-.single-post .post-content p {
-	margin-bottom: 40px;
+.post-content p {
+	font-size:17px;
+	margin-bottom: 30px;
+	line-height:2em;
 }
 
-.single-post .author {
+.post-content h3 {
+line-height:2.5em;
+}
+.post-content .author {
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
 	margin-bottom: 100px;
 }
 
-.single-post .author .avatar {
+.post-content .author .avatar {
 	margin-right: 40px;
 }
 
-.single-post .author .avatar img {
+.post-content .author .avatar img {
 	min-width: 117px;
 }
 
-.single-post .author .author-info h2 {
+.post-content .author .author-info h2 {
 	font-size: 18px;
 	margin-bottom: 20px;
 }
 
-.single-post .author .author-info h2 span {
+.post-content .author .author-info h2 span {
 	color: #8e8f9b;
 }
 

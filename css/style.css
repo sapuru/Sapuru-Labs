@@ -534,18 +534,18 @@ ul {
   Testimonial section
 --------------------------*/
 .testimonial-section {
-	padding-top: 320px;
+	padding-top: 100px;
 	background: #A1D5D3 ;
 	position: relative;
 }
 
 .test-overlay {
 	position: absolute;
-	background-image: url("../img/ay4.png");
+	background-image: url("../img/ay1.png");
 	background-repeat: no-repeat;
 	background-position: bottom right;
 	background-size: contain;
-	bottom: 0;
+	bottom: 50px;
 	height: 78%;
 	left: 50px;
 }
@@ -680,6 +680,16 @@ ul {
 	text-transform: uppercase;
 	margin-bottom: 20px;
 	font-weight: 400;
+}
+
+.service .service-text span,
+.service .icon-box-text span,
+.icon-box .service-text span,
+.icon-box .icon-box-text span {
+	background: #EAE219;
+	padding: 0 3px 5px;
+	display: inline-block;
+	color: #0b1033;
 }
 
 .service .service-text p,
