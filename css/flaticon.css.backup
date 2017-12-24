@@ -57,7 +57,7 @@
 .flaticon-028-idea-1:before { content: "\f11b"; }
 .flaticon-029-sketchbook:before { content: "\f11c"; }
 .flaticon-030-computer:before { content: "\f11d"; }
-.8':before { content: "\f11e"; }
+.flaticon-031-scheme:before { content: "\f11e"; }
 .flaticon-032-explorer:before { content: "\f11f"; }
 .flaticon-033-museum:before { content: "\f120"; }
 .flaticon-034-cactus:before { content: "\f121"; }

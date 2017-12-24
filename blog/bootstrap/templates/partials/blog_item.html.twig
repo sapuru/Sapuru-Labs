@@ -1,5 +1,4 @@
 
-
 					<div class="post-item topad">
  						<div class="post-thumbnail">
     {% set header_image = page.header.header_image|defined(true) %}
@@ -57,16 +56,19 @@
     {% elseif truncate and page.summary != page.content %}
         <p>{{ page.summary }}</p>
         <p><a href="{{ page.url }}" class="read-more">Continuar...</a></p>
+			</div>
     {% elseif truncate %}
         {% if page.summary != page.content %}
             <p>{{ page.content|truncate(550) }}</p>
+					</div>
         {% else %}
             <p>{{ page.content }}</p>
+					</div>
         {% endif %}
         <p><a href="{{ page.url }}" class="read-more">Continuar...</a></p>
     {% else %}
-	</div>
         <p>{{ page.content }}</p>
+					</div>
 				<div class="author">
 					<div class="avatar">
 						<img src="http://sapuru.soy/grav/user/themes/bootstrap/images/avatar.jpg" alt="">
@@ -101,6 +103,4 @@
 			</div>
 		{% endif %}
 	</div>
-
-
-    </div>
+</div>
