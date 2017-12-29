@@ -48,6 +48,7 @@ h6 {
 	font-family: "aqua", sans-serif;
 	padding: 0;
 	margin: 0;
+	line-height:1.8em;
 }
 
 h2 {
@@ -171,6 +172,13 @@ ul {
 	color: #0b1033;
 }
 
+
+h4 span {
+	background: #EAE219;
+	padding: 0 3px 5px;
+	display: inline-block;
+	color: #0b1033;
+}
 /*------------------------
 	Common elements
 --------------------------*/
@@ -534,8 +542,13 @@ ul {
   Testimonial section
 --------------------------*/
 .testimonial-section {
-	padding-top: 100px;
-	background: #A1D5D3 ;
+	padding-top: 230px;
+	background: #1EAFB2;
+	position: relative;
+}
+
+.cyan {
+	background: #1EAFB2;
 	position: relative;
 }
 
@@ -591,7 +604,13 @@ ul {
 .testimonial .client-name p {
 	font-style: normal;
 	font-size: 12px;
-	color: #969696;
+	color: #fff;
+}
+
+.testimonial .client-name a {
+	font-style: normal;
+	font-size: 12px;
+	color: #fff;
 }
 
 /* Testimonial carousel */
@@ -708,6 +727,9 @@ ul {
 	color: #fff;
 }
 
+.light {
+	color:#fff;
+}
 .service.left,
 .icon-box.left {
 	text-align: right;
