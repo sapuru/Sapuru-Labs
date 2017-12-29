@@ -179,6 +179,13 @@ h4 span {
 	display: inline-block;
 	color: #0b1033;
 }
+
+p span {
+	background: #EAE219;
+	padding: 0 3px 5px;
+	display: inline-block;
+	color: #0b1033;
+}
 /*------------------------
 	Common elements
 --------------------------*/
