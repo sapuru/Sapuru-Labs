@@ -18,29 +18,23 @@
 					<div class="widget-item">
 						<h2 class="widget-title">Relacionado</h2>
     {% include 'partials/relatedpages.html.twig' %}
-{% endif %}
-</div>
-{% if config.plugins.random.enabled %}
-					<div class="widget-item">
-						<h2 class="widget-title">Random Article</h2>
-    <a class="button" href="{{ base_url_relative }}/random"><i class="fa fa-retweet"></i> I'm Feeling Lucky!</a>
-</div>
+		</div>
 {% endif %}
 
 {% set taxlist = taxonomylist.get() %}
 {% if taxlist %}
+<div class="widget-item">
+<h2 class="widget-title">Categorías</h2>
+<ul class="tag">
 		{% set category = grav.uri.params("category", true) %}
 		{% for tax,value in taxlist['category'] %}
 		{% set current_page = (tax == category) ? 'active' : '' %}
-		<div class="widget-item">
-		<h2 class="widget-title">Categorías</h2>
-		<ul class="tag">
 		<li class="{{ current_page }}">
 				<a href="{{ base_url }}/category{{ config.system.param_sep }}{{ tax|e('url') }}">{{ tax|capitalize }}</a>
 		</li>
-	</ul>
-	</div>
 		{% endfor %}
+		</ul>
+		</div>
 {% endif %}
 
 {% if config.plugins.taxonomylist.enabled %}
@@ -49,7 +43,6 @@
     {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
 </div>
 {% endif %}
-
 
 {% if config.plugins.archives.enabled %}
 					<div class="widget-item">
